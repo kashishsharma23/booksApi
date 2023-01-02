@@ -13,6 +13,7 @@ pipeline{
     stage('Build docker image'){
       steps{
         script{
+          checkout scm
           sh 'docker build -t books .'
         }
       }
