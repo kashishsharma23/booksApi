@@ -13,9 +13,8 @@ pipeline {
     }
     stage('Docker Build') {
     	agent any
-      steps {
-	bat 'wsl'
-      	sh 'docker build -t kashish238/spring:latest .'
+	steps {
+      	bat 'docker build -t kashish238/spring:latest .'
       }
     }
   }
